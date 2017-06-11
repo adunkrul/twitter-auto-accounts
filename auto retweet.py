@@ -34,4 +34,4 @@ if __name__ == "__main__":
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     stream = Stream(auth, Listener) 
-stream.filter(track=['your_desired_word'])
+    stream.filter(track=['your_desired_word'])
