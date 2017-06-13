@@ -21,7 +21,7 @@ class StdOutListener(StreamListener):
         print(data)
         text = tweet.get('text')
         retweeted_count = tweet.get('retweet_count')
-        if media in tweet.get('entities') and retweeted_count == 0:
+        if media in str(tweet.get('entities')) and retweeted_count == 0:
             id_str = tweet.get('id_str')
             try:
                 api.retweet(id_str)
